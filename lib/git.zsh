@@ -8,7 +8,7 @@ autoload -Uz is-at-least
 # We wrap in a local function instead of exporting the variable directly in
 # order to avoid interfering with manually-run git commands by the user.
 function __git_prompt_git() {
-  GIT_OPTIONAL_LOCKS=0 command git "$@"
+  GIT_OPTIONAL_LOCKS=0 git "$@"
 }
 
 function _omz_git_prompt_info() {
